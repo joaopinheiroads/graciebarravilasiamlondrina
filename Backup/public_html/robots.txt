@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /vendor/
+Disallow: /composer.phar
+Disallow: /composer.json
+Disallow: /composer.lock
+# Permitir acesso ao restante do site
+Allow: /
+
+
+Sitemap: https://graciebarravilasiam.com.br/sitemap.xml

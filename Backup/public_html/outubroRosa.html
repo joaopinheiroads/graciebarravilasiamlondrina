@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Outubro Rosa</title>
+	<style>
+		body {
+			background: #000;
+			color: #fff;
+			min-height: 100vh;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-family: Arial, Helvetica, sans-serif;
+            ;
+		}
+		.rosa-img {
+			width: 20%;
+			margin-bottom: 24px;
+		}
+		.texto2 {
+			text-align: center;
+			font-size: 1.5rem;
+			max-width: 500px;
+		}
+
+        .texto1{
+            text-align: center;
+			font-size: 2.5rem;
+			max-width: 500px;
+            flex-direction: row;
+            gap: 5%;
+            display: flex;
+            margin-bottom: 5%;
+
+        }
+
+        .textoOneAndTwoo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            gap: 3%;
+            flex-direction: row;
+        }
+
+        #rosa{
+            color: #bf11a0;
+        }
+
+
+
+        .fundo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            background-image: url('public/images/quadroDourado.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.55;
+            background-color: #edcae7;
+        }
+
+        @media (orientation: portrait){
+
+        .texto2{
+            font-size: 1.5rem;
+            width: 80%;
+            margin-top: 5%;
+        }
+
+   
+        }
+
+
+            .btn-ir-principal {
+                display: none;
+                position: fixed;
+                left: 50%;
+                bottom: 32px;
+                transform: translateX(-50%);
+                background: #bf11a0;
+                color: #fff;
+                border: none;
+                border-radius: 24px;
+                padding: 14px 32px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                z-index: 10;
+                transition: background 0.2s;
+            }
+            .btn-ir-principal:hover {
+                background: #a00e80;
+            }
+    </style>
+    </head>
+    <body>
+    <div class="fundo"></div>
+	<!--<img src="public/images/quadroDourado.png" alt="Laço Rosa Outubro Rosa" class="rosa-img">-->
+    <div class ="textoOneAndTwoo">
+	<div class="texto1">
+		<strong>Outubro</strong><br> 
+    </div>
+    <div class ="texto1" id="rosa">
+        <strong>Rosa</strong><br>
+    </div>
+    </div>
+
+
+    <div class="texto2">
+        Uma homenagem a todas as mulheres: sua força, coragem e inspiração nos motivam a lutar pela prevenção e pelo cuidado. Que o laço rosa seja símbolo de amor, esperança e vida.<br><br>
+        Valorize-se, cuide-se, previna-se!
+    </div>
+
+    <button class="btn-ir-principal" id="btnIrPrincipal">Ir para página principal</button>
+
+    <script>
+        // Exibe o botão após o carregamento da página
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('btnIrPrincipal').style.display = 'block';
+            }, 500); // aparece logo após o loading
+            // Redirecionamento automático após 15 segundos
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 15000);
+            // Botão manual
+            document.getElementById('btnIrPrincipal').onclick = function() {
+                window.location.href = 'index.html';
+            };
+        });
+    </script>
+</body>
+</html>
